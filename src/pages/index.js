@@ -173,10 +173,74 @@ const IndexPage = () => {
           </li>
         ))}
       </ul>
-      <img
-        alt="Gatsby G Logo"
-        src="data:image/svg+xml,%3Csvg width='24' height='24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12 2a10 10 0 110 20 10 10 0 010-20zm0 2c-3.73 0-6.86 2.55-7.75 6L14 19.75c3.45-.89 6-4.02 6-7.75h-5.25v1.5h3.45a6.37 6.37 0 01-3.89 4.44L6.06 9.69C7 7.31 9.3 5.63 12 5.63c2.13 0 4 1.04 5.18 2.65l1.23-1.06A7.959 7.959 0 0012 4zm-8 8a8 8 0 008 8c.04 0 .09 0-8-8z' fill='%23639'/%3E%3C/svg%3E"
-      />
+      <article className="Pagetemplate__PageContent-ao9tld-0 cQGdt">
+        <h1 id="impressum">
+          Impressum
+        </h1>
+        <h2 id="angaben-gemäß-§-5-tmg">
+          Angaben gemäß § 5 TMG
+        </h2>
+        <p>Might Be Wrong<br/>
+          Straßé, 42<br/>
+          12345 Stadt
+        </p>
+        <h2 id="kontakt">
+          Kontakt
+        </h2>
+        <p>Telefon: <em>Kann per E-Mail angefordert werden</em><br/>
+          E-Mail: mail@example.com</p>
+        <h2 id="umsatzsteuer">
+          Umsatzsteuer
+        </h2>
+        <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: 46852700394</p>
+        <h2 id="streitschlichtung">
+          Streitschlichtung
+        </h2>
+        <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
+          <a href="https://ec.europa.eu/consumers/odr" target="_blank"
+             rel="nofollow noopener noreferrer">https://ec.europa.eu/consumers/odr</a>.
+          Unsere E-Mail-Adresse finden Sie oben im Impressum.
+          Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle
+          teilzunehmen.</p>
+        <h3 id="haftung-für-inhalte">
+          Haftung für Inhalte
+        </h3>
+        <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen
+          Gesetzen verantwortlich.
+          Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte
+          fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit
+          hinweisen.
+          Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen
+          bleiben hiervon unberührt.
+          Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung
+          möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend
+          entfernen.</p>
+        <h3 id="haftung-für-links">
+          Haftung für Links
+        </h3>
+        <p>Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir keinen Einfluss haben.
+          Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen.
+          Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten
+          verantwortlich.
+          Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
+          Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar.</p>
+        <p>Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer
+          Rechtsverletzung nicht zumutbar.
+          Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.</p>
+        <h3 id="urheberrecht">
+          Urheberrecht
+        </h3>
+        <p>Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen
+          Urheberrecht.
+          Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
+          Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+          Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet.
+          Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter
+          beachtet.
+          Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
+          Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.
+          Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen</p>
+      </article>
     </main>
   )
 }
