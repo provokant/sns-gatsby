@@ -1,4 +1,6 @@
 import * as React from "react"
+import { graphql, useStaticQuery } from "gatsby";
+import { GatsbyImage } from "gatsby-plugin-image";
 
 // styles
 const pageStyles = {
@@ -9,13 +11,14 @@ const pageStyles = {
 const headingStyles = {
   marginTop: 0,
   marginBottom: 64,
-  maxWidth: 320,
+  maxWidth: 600,
 }
 const headingAccentStyles = {
   color: "#663399",
 }
 const paragraphStyles = {
   marginBottom: 48,
+  maxWidth: 540,
 }
 const codeStyles = {
   color: "#8A6534",
@@ -42,12 +45,6 @@ const linkStyle = {
   verticalAlign: "5%",
 }
 
-const docLinkStyle = {
-  ...linkStyle,
-  listStyleType: "none",
-  marginBottom: 24,
-}
-
 const descriptionStyle = {
   color: "#232129",
   fontSize: 14,
@@ -56,119 +53,80 @@ const descriptionStyle = {
   lineHeight: 1.25,
 }
 
-const docLink = {
-  text: "Documentation",
-  url: "https://www.gatsbyjs.com/docs/",
-  color: "#8954A8",
+const instaStyle = {
+  maxWidth: 200
 }
 
-const badgeStyle = {
-  color: "#fff",
-  backgroundColor: "#088413",
-  border: "1px solid #088413",
-  fontSize: 11,
-  fontWeight: "bold",
-  letterSpacing: 1,
-  borderRadius: 4,
-  padding: "4px 6px",
-  display: "inline-block",
-  position: "relative",
-  top: -2,
-  marginLeft: 10,
-  lineHeight: 1,
+const imgStyle = {
+  // maxWidth: 200
 }
-
-// data
-const links = [
-  {
-    text: "Tutorial",
-    url: "https://www.gatsbyjs.com/docs/tutorial/",
-    description:
-      "A great place to get started if you're new to web development. Designed to guide you through setting up your first Gatsby site.",
-    color: "#E95800",
-  },
-  {
-    text: "How to Guides",
-    url: "https://www.gatsbyjs.com/docs/how-to/",
-    description:
-      "Practical step-by-step guides to help you achieve a specific goal. Most useful when you're trying to get something done.",
-    color: "#1099A8",
-  },
-  {
-    text: "Reference Guides",
-    url: "https://www.gatsbyjs.com/docs/reference/",
-    description:
-      "Nitty-gritty technical descriptions of how Gatsby works. Most useful when you need detailed information about Gatsby's APIs.",
-    color: "#BC027F",
-  },
-  {
-    text: "Conceptual Guides",
-    url: "https://www.gatsbyjs.com/docs/conceptual/",
-    description:
-      "Big-picture explanations of higher-level Gatsby concepts. Most useful for building understanding of a particular topic.",
-    color: "#0D96F2",
-  },
-  {
-    text: "Plugin Library",
-    url: "https://www.gatsbyjs.com/plugins",
-    description:
-      "Add functionality and customize your Gatsby site or app with thousands of plugins built by our amazing developer community.",
-    color: "#8EB814",
-  },
-  {
-    text: "Build and Host",
-    url: "https://www.gatsbyjs.com/cloud",
-    badge: true,
-    description:
-      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
-    color: "#663399",
-  },
-]
 
 // markup
-const IndexPage = () => {
+export const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allInstaNode {
+        nodes {
+          id
+          mediaType
+          preview
+          timestamp
+          caption
+          localFile {
+            childImageSharp {
+              gatsbyImageData(layout: FIXED)
+            }
+          }
+        }
+      }
+    }
+  `);
+  const { allInstaNode: { nodes } } = data;
+  const instaPosts = nodes && nodes
+    // .filter(({mediaType}) => "GraphImage" === mediaType) // Filter by GraphImage or GraphVideo
+    .map(({
+      id,
+      caption,
+      preview: imgPath,
+      localFile: { childImageSharp: { gatsbyImageData: imageData } }
+    }) => ({
+      caption,
+      color: "#BAD455",
+      imgPath,
+      imageData,
+      url: `https://www.instagram.com/p/${id}/`,
+    }));
+
   return (
     <main style={pageStyles}>
-      <title>Home Page</title>
+      <title>Studieren nicht stagnieren! 14.6. um 19Uhr Karlsplatz, Stuttgart</title>
       <h1 style={headingStyles}>
-        Congratulations
-        <br />
-        <span style={headingAccentStyles}>— you just made a Gatsby site! </span>
+        Wir fordern!!
+        <br/>
+        <span style={headingAccentStyles}>— die Aussetzung der Gebühren für alle Studierenden</span>
         <span role="img" aria-label="Party popper emojis">
           🎉🎉🎉
         </span>
       </h1>
       <p style={paragraphStyles}>
-        Edit <code style={codeStyles}>src/pages/index.js</code> to see this page
-        update in real-time.{" "}
-        <span role="img" aria-label="Sunglasses smiley emoji">
-          😎
-        </span>
+        Komm am <code style={codeStyles}>Montag, 14.06.2021</code> zum Karlsplatz nach Stuttgart!
+        Komm um <code style={codeStyles}>19:00 Uhr</code> zur Kundgebung und Protest.
       </p>
       <ul style={listStyles}>
-        <li style={docLinkStyle}>
-          <a
-            style={linkStyle}
-            href={`${docLink.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-          >
-            {docLink.text}
-          </a>
-        </li>
-        {links.map(link => (
+        {instaPosts && instaPosts.map(link => (
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
                 style={linkStyle}
-                href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+                href={`${link.url}`}
+                target={"_blank"}
               >
-                {link.text}
+                {link.caption}
               </a>
-              {link.badge && (
-                <span style={badgeStyle} aria-label="New Badge">
-                  NEW!
-                </span>
-              )}
-              <p style={descriptionStyle}>{link.description}</p>
+              <p style={descriptionStyle}>{link.caption}</p>
+              <div style={instaStyle}>
+                <GatsbyImage alt={link.caption} image={link.imageData} style={imgStyle}/>
+              </div>
             </span>
           </li>
         ))}
