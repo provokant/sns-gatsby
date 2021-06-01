@@ -7,6 +7,9 @@ const pageStyles = {
   color: "#232129",
   padding: 96,
   fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  width: "100%",
+  maxWidth: 1200,
+  margin: "0 auto",
 }
 const headingStyles = {
   marginTop: 0,
@@ -38,7 +41,7 @@ const listItemStyles = {
   marginBottom: 30,
 }
 
-const linkStyle = {
+const linkStyles = {
   color: "#8954A8",
   fontWeight: "bold",
   fontSize: 16,
@@ -57,8 +60,13 @@ const instaStyle = {
   maxWidth: 200
 }
 
-const imgStyle = {
+const imgStyles = {
   // maxWidth: 200
+}
+
+const sectionStyles = {
+  width: "100%",
+  minHeight: "80vh"
 }
 
 // markup
@@ -117,7 +125,7 @@ export const IndexPage = () => {
           <li key={link.url} style={{ ...listItemStyles, color: link.color }}>
             <span>
               <a
-                style={linkStyle}
+                style={linkStyles}
                 href={`${link.url}`}
                 target={"_blank"}
               >
@@ -125,12 +133,20 @@ export const IndexPage = () => {
               </a>
               <p style={descriptionStyle}>{link.caption}</p>
               <div style={instaStyle}>
-                <GatsbyImage alt={link.caption} image={link.imageData} style={imgStyle}/>
+                <GatsbyImage alt={link.caption ?? ""} image={link.imageData} style={imgStyles}/>
               </div>
             </span>
           </li>
         ))}
       </ul>
+
+      <section style={sectionStyles}>
+        <iframe title={"Open Call"}
+                src="https://docs.google.com/forms/d/e/1FAIpQLScbwhFgZcPZHyF_9fOv6tg_sRCLP-bxuB-LBLW3rbagqstlFg/viewform?embedded=true"
+                width={sectionStyles.width} height={1200} frameBorder="0" marginHeight="0" marginWidth="0">Wird geladen…
+        </iframe>
+      </section>
+
       <article className="Pagetemplate__PageContent-ao9tld-0 cQGdt">
         <h1 id="impressum">
           Impressum
