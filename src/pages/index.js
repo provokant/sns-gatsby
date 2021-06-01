@@ -70,7 +70,7 @@ const sectionStyles = {
 }
 
 // markup
-export const IndexPage = () => {
+const IndexPage = () => {
   const data = useStaticQuery(graphql`
     {
       allInstaNode {
