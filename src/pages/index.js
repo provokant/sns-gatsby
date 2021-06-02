@@ -49,7 +49,7 @@ const linkStyles = {
   verticalAlign: "5%",
 }
 
-const descriptionStyle = {
+const descriptionStyles = {
   color: "#232129",
   fontSize: 14,
   marginTop: 10,
@@ -57,7 +57,7 @@ const descriptionStyle = {
   lineHeight: 1.25,
 }
 
-const instaStyle = {
+const instaStyles = {
   maxWidth: 200
 }
 
@@ -68,6 +68,11 @@ const imgStyles = {
 const sectionStyles = {
   width: "100%",
   minHeight: "80vh"
+}
+
+const imprintStyles = {
+  fontSize: "80%",
+  color: "#3e3749"
 }
 
 // markup
@@ -133,8 +138,8 @@ const IndexPage = () => {
               >
                 {link.caption}
               </a>
-              <p style={descriptionStyle}>{link.caption}</p>
-              <div style={instaStyle}>
+              <p style={descriptionStyles}>{link.caption}</p>
+              <div style={instaStyles}>
                 <GatsbyImage alt={link.caption ?? ""} image={link.imageData} style={imgStyles}/>
               </div>
             </span>
@@ -152,7 +157,7 @@ const IndexPage = () => {
         </iframe>
       </section>
 
-      <article className="">
+      <article style={imprintStyles}>
         <h1 id="impressum">
           Impressum
         </h1>
