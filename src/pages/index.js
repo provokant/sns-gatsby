@@ -1,6 +1,7 @@
 import * as React from "react"
 import { graphql, useStaticQuery } from "gatsby";
 import { GatsbyImage } from "gatsby-plugin-image";
+import { formIframeSrc } from "../../site-config";
 
 // styles
 const pageStyles = {
@@ -128,6 +129,7 @@ const IndexPage = () => {
                 style={linkStyles}
                 href={`${link.url}`}
                 target={"_blank"}
+                rel={"nofollow noopener noreferrer"}
               >
                 {link.caption}
               </a>
@@ -141,32 +143,32 @@ const IndexPage = () => {
       </ul>
 
       <section style={sectionStyles}>
-        <iframe title={"Open Call"}
-                src="https://docs.google.com/forms/d/e/1FAIpQLScbwhFgZcPZHyF_9fOv6tg_sRCLP-bxuB-LBLW3rbagqstlFg/viewform?embedded=true"
-                width={sectionStyles.width} height={1200} frameBorder="0" marginHeight="0" marginWidth="0">Wird geladen…
+        <iframe
+          title={"Open Call"}
+          src={formIframeSrc}
+          width={sectionStyles.width} height={1200} frameBorder="0" marginHeight="0" marginWidth="0"
+        >
+          Wird geladen…
         </iframe>
       </section>
 
-      <article className="Pagetemplate__PageContent-ao9tld-0 cQGdt">
+      <article className="">
         <h1 id="impressum">
           Impressum
         </h1>
         <h2 id="angaben-gemäß-§-5-tmg">
           Angaben gemäß § 5 TMG
         </h2>
-        <p>Might Be Wrong<br/>
-          Straßé, 42<br/>
-          12345 Stadt
+        <p>
+          Maximilian Sprenger<br/>
+          Böheimstraße 43a<br/>
+          70199 Stuttgart
         </p>
         <h2 id="kontakt">
           Kontakt
         </h2>
         <p>Telefon: <em>Kann per E-Mail angefordert werden</em><br/>
-          E-Mail: mail@example.com</p>
-        <h2 id="umsatzsteuer">
-          Umsatzsteuer
-        </h2>
-        <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: 46852700394</p>
+          E-Mail: studieren.nicht.stagnieren @ posteo.de</p>
         <h2 id="streitschlichtung">
           Streitschlichtung
         </h2>

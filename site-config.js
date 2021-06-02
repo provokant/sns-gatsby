@@ -10,6 +10,8 @@ const config = {
   landingPageImage: "images/content/hands.png",
   landingPageTeaser: "We're constantly collecting introductory material for all those interested in philosophy.<br><br><br><i><small>Easy language · Well researched · User-friendly</small></i>",
   landingPageTitle: "Philosophical<br>Paragraphs<br>Explained",
+  formUrl: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScbwhFgZcPZHyF_9fOv6tg_sRCLP-bxuB-LBLW3rbagqstlFg/formResponse",
+  formIframeSrc: "https://docs.google.com/forms/d/e/1FAIpQLScbwhFgZcPZHyF_9fOv6tg_sRCLP-bxuB-LBLW3rbagqstlFg/viewform?embedded=true",
   pathPrefix: "/sns-gatsby/",
   questionAccept: "Yes, let me read more!",
   questionDeny: "No, thanks",
