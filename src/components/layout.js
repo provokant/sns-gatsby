@@ -1,0 +1,23 @@
+import tw from "twin.macro";
+import { GatsbyImage } from "gatsby-plugin-image";
+
+export const Section = tw.section`relative bg-white overflow-hidden mb-36`;
+export const IntroWrapper = tw.div`max-w-7xl mx-auto`;
+export const Intro = tw.div`relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`;
+export const PolygonWrapper = tw.svg`hidden lg:block absolute right-0 inset-y-0 h-full w-48 text-white transform translate-x-1`;
+export const PictureWrapper = tw.div`lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2`;
+export const Picture = tw.img`h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full`;
+export const HeroWrapper = tw.main`mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28`;
+export const Hero = tw.div`sm:text-center lg:text-left`;
+export const HeroTitle = tw.h1`text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl`;
+export const HeroParagraph = tw.p`mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0`;
+export const Teaser = tw.p`mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto`;
+export const TeaserHeadline = tw.h2`text-base text-yellow-600 font-semibold tracking-wide uppercase`;
+export const Paragraph = tw.p`text-xl text-gray-500 lg:w-10/12`;
+export const Container = tw.div`max-w-7xl mt-8 mx-auto px-4 sm:px-6 lg:px-8`;
+export const Posts = tw.ul`flex flex-wrap mb-12 text-left`;
+export const PostItem = tw.li`w-full p-6 mx-auto lg:w-1/3`;
+export const Card = tw.div`p-4 lg:p-8 rounded-xl bg-gray-50`;
+export const CardImage = tw(GatsbyImage)`object-cover object-center w-full mb-8 lg:h-48 md:h-36 rounded-xl`;
+export const CardTitle = tw.h3`mx-auto mb-8 text-2xl font-semibold leading-none tracking-tighter text-black`;
+export const CardParagraph = tw.p`mx-auto text-base font-medium leading-relaxed text-gray-700`;
