@@ -1,17 +1,9 @@
 import { Popover, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
-import {
-  Hero,
-  HeroParagraph,
-  HeroTitle,
-  HeroWrapper,
-  Intro,
-  IntroWrapper, Picture,
-  PictureWrapper,
-  PolygonWrapper, Section
-} from "./layout";
+import { Hero, HeroParagraph, HeroTitle, HeroWrapper, Intro, IntroWrapper, Picture, PictureWrapper, PolygonWrapper, Section } from "./layout";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import { GlobalStyles } from "twin.macro";
+import { siteBanner, siteUrl } from "../../site-config";
 
 export const Header = () => {
   return (
@@ -27,7 +19,7 @@ export const Header = () => {
               preserveAspectRatio="none"
               aria-hidden="true"
             >
-              <polygon points="50,0 100,0 50,100 0,100" />
+              <polygon points="50,0 100,0 50,100 0,100"/>
             </PolygonWrapper>
 
             <Popover>
@@ -40,7 +32,7 @@ export const Header = () => {
                     >
                       <div tw="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                         <div tw="flex items-center justify-between w-full md:w-auto">
-                          <a href="#">
+                          <a href={siteUrl}>
                             <span tw="sr-only">Studieren nicht Stagnieren!</span>
                             <img
                               tw="h-8 w-auto sm:h-10"
@@ -49,15 +41,16 @@ export const Header = () => {
                             />
                           </a>
                           <div tw="-mr-2 flex items-center md:hidden">
-                            <Popover.Button tw="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
+                            <Popover.Button
+                              tw="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
                               <span tw="sr-only">Menü öffnen</span>
-                              <MenuIcon tw="h-6 w-6" aria-hidden="true" />
+                              <MenuIcon tw="h-6 w-6" aria-hidden="true"/>
                             </Popover.Button>
                           </div>
                         </div>
                       </div>
                       <div tw="hidden md:block md:ml-10 md:pr-4 md:space-x-8">
-                        {navigation.filter(({isMobileOnly}) => !isMobileOnly).map((item) => (
+                        {navigation.filter(({ isMobileOnly }) => !isMobileOnly).map((item) => (
                           <a key={item.name} href={item.href} tw="font-medium text-gray-500 hover:text-gray-900">
                             {item.name}
                           </a>
@@ -91,9 +84,10 @@ export const Header = () => {
                             />
                           </div>
                           <div tw="-mr-2">
-                            <Popover.Button tw="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
+                            <Popover.Button
+                              tw="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
                               <span tw="sr-only">Close main menu</span>
-                              <XIcon tw="h-6 w-6" aria-hidden="true" />
+                              <XIcon tw="h-6 w-6" aria-hidden="true"/>
                             </Popover.Button>
                           </div>
                         </div>
@@ -133,15 +127,15 @@ export const Header = () => {
                 <div tw="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div tw="rounded-md shadow">
                     <a
-                      href="#"
+                      href="#flyer"
                       tw="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-yellow-600 hover:bg-yellow-700 md:py-4 md:text-lg md:px-10"
                     >
-                      Auf Insta teilen
+                      Flyer ausdrucken
                     </a>
                   </div>
                   <div tw="mt-3 sm:mt-0 sm:ml-3">
                     <a
-                      href="#"
+                      href="#opencall"
                       tw="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-yellow-700 bg-yellow-100 hover:bg-yellow-200 md:py-4 md:text-lg md:px-10"
                     >
                       Eigenen Post einreichen
@@ -155,7 +149,7 @@ export const Header = () => {
 
         <PictureWrapper>
           <Picture
-            src="https://images.unsplash.com/photo-1583870996776-847fa9899398?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80"
+            src={siteBanner}
             alt=""/>
         </PictureWrapper>
       </Section>

@@ -23,7 +23,7 @@ export const Claims = () => {
                   <div key={item.name} tw="relative">
                     <dt>
                       <div tw="absolute flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white">
-                        <item.icon tw="h-6 w-6" aria-hidden="true" />
+                        <item.icon tw="h-6 w-6" aria-hidden="true"/>
                       </div>
                       <p tw="ml-16 text-lg leading-6 font-medium text-gray-900">{item.name}</p>
                     </dt>
