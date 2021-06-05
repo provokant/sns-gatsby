@@ -6,6 +6,7 @@ import { Header } from "../components/header";
 import { Statement } from "../components/statement";
 import { Claims } from "../components/claims";
 import { OpenCall } from "../components/open-call";
+import { Imprint } from "../components/imprint";
 
 const IndexPage = () => {
   const data = useStaticQuery(graphql`
@@ -83,6 +84,8 @@ const IndexPage = () => {
       </Section>
 
       <OpenCall/>
+
+      <Imprint/>
     </>
 
   )
