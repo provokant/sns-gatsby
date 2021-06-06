@@ -61,7 +61,7 @@ export const InstaPosts = () => {
                   target={"_blank"}
                   rel={"nofollow noopener noreferrer"}
                 >
-                  <CardImage alt={link.caption ?? ""} image={link.imageData}/>
+                  <CardImage alt={link.caption ?? ""} image={link.imageData} imgStyle={{objectFit: "contain"}}/>
                 </a>
               </Card>
             </PostItem>
