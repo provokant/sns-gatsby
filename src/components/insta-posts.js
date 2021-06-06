@@ -34,13 +34,15 @@ export const InstaPosts = () => {
          caption,
          preview: imgPath,
          localFile: { childImageSharp: { gatsbyImageData: imageData } }
-       }) => ({
-        caption,
-        color: "#BAD455",
-        imgPath,
-        imageData,
-        url: `https://www.instagram.com/p/${id}/`,
-      })
+      }) => {
+        return {
+          caption,
+          imgPath,
+          imageData,
+          title: caption && caption.slice(0, caption.match(/[!?.,;]/m)?.index + 1),
+          url: `https://www.instagram.com/p/${id}/`,
+        }
+      }
     );
 
   return (
@@ -50,7 +52,7 @@ export const InstaPosts = () => {
           {instaPosts && instaPosts.map(link => (
             <PostItem key={link.url}>
               <Card>
-                <CardTitle>Vielleicht 'ne Überschrift</CardTitle>
+                <CardTitle>{link.title}</CardTitle>
                 <CardParagraph>
                   {link.caption}
                 </CardParagraph>
