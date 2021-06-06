@@ -2,8 +2,10 @@ import { Popover, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
 import { Hero, HeroParagraph, HeroTitle, HeroWrapper, Intro, IntroWrapper, Picture, PictureWrapper, PolygonWrapper, Section } from "./layout";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import { GlobalStyles } from "twin.macro";
-import { siteBanner, siteUrl } from "../../site-config";
+import tw, { GlobalStyles } from "twin.macro";
+import { featureCta, siteBanner, siteLogoTitle, siteUrl } from "../../site-config";
+
+const Logo = tw.a`font-bold`;
 
 export const Header = () => {
   return (
@@ -32,14 +34,9 @@ export const Header = () => {
                     >
                       <div tw="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                         <div tw="flex items-center justify-between w-full md:w-auto">
-                          <a href={siteUrl}>
-                            <span tw="sr-only">Studieren nicht Stagnieren!</span>
-                            <img
-                              tw="h-8 w-auto sm:h-10"
-                              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                              alt={""}
-                            />
-                          </a>
+                          <Logo href={siteUrl}>
+                            {siteLogoTitle}
+                          </Logo>
                           <div tw="-mr-2 flex items-center md:hidden">
                             <Popover.Button
                               tw="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
@@ -77,11 +74,9 @@ export const Header = () => {
                       <div tw="rounded-lg shadow-md bg-white ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div tw="px-5 pt-4 flex items-center justify-between">
                           <div>
-                            <img
-                              tw="h-8 w-auto"
-                              src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-                              alt=""
-                            />
+                            <Logo href={siteUrl}>
+                              {siteLogoTitle}
+                            </Logo>
                           </div>
                           <div tw="-mr-2">
                             <Popover.Button
@@ -102,12 +97,12 @@ export const Header = () => {
                             </a>
                           ))}
                         </div>
-                        <a
+                        {featureCta && <a
                           href="#opencall"
                           tw="block w-full px-5 py-3 text-center font-medium text-yellow-600 bg-gray-50 hover:bg-gray-100"
                         >
                           Eigenen Post einreichen
-                        </a>
+                        </a>}
                       </div>
                     </Popover.Panel>
                   </Transition>
@@ -124,7 +119,7 @@ export const Header = () => {
                 <HeroParagraph>
                   14.06.2021 — Karlsplatz Stuttgart — 19:00 Uhr
                 </HeroParagraph>
-                <div tw="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                {featureCta && <div tw="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div tw="rounded-md shadow">
                     <a
                       href="#flyer"
@@ -141,7 +136,7 @@ export const Header = () => {
                       Eigenen Post einreichen
                     </a>
                   </div>
-                </div>
+                </div>}
               </Hero>
             </HeroWrapper>
           </Intro>
@@ -158,8 +153,8 @@ export const Header = () => {
 }
 
 const navigation = [
-  { name: 'Beiträge', href: '#posts', isMobileOnly: false, },
-  { name: 'Open Call', href: '#opencall', isMobileOnly: false, },
-  { name: 'Kontakt', href: '#contact', isMobileOnly: false, },
-  { name: 'Impressum', href: '#imprint', isMobileOnly: true, },
+  { name: 'Beiträge', href: '#posts', isMobileOnly: false },
+  { name: 'Open Call', href: '#opencall', isMobileOnly: false },
+  { name: 'Kontakt', href: '#contact', isMobileOnly: false },
+  { name: 'Impressum', href: '#imprint', isMobileOnly: true },
 ];
