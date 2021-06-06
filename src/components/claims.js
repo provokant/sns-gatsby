@@ -25,9 +25,8 @@ export const Claims = () => {
                       <div tw="absolute flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white">
                         <item.icon tw="h-6 w-6" aria-hidden="true"/>
                       </div>
-                      <p tw="ml-16 text-lg leading-6 font-medium text-gray-900">{item.name}</p>
                     </dt>
-                    <dd tw="mt-2 ml-16 text-base text-gray-500">{item.description}</dd>
+                    <dd tw="ml-16 text-lg leading-6 font-medium text-gray-900">{item.claim}</dd>
                   </div>
                 ))}
               </dl>
@@ -45,32 +44,27 @@ export const Claims = () => {
 
 const listItems = [
   {
-    name: "Forderung #1",
-    description:
+    claim:
       "Wir fordern ein integratives Konzept der universitären Idee für die digitalen Angebote! Die Universität lebt auch außerhalb des Hörsaals und Diskurse lassen sich nur sehr schwer oder überhaupt nicht in Videokonferenzen führen.",
     icon: GlobeAltIcon,
   },
   {
-    name: "Forderung #2",
-    description:
+    claim:
       "Wir fordern konkrete Perspektiven — sei es für die Öffnung der Akademien, Hochschulen und Universitäten, für die Eingliederung von Erstsemester im Studium oder Letztsemester auf dem Arbeitsmarkt!",
     icon: AcademicCapIcon,
   },
   {
-    name: "Forderung #3",
-    description:
+    claim:
       "Wir fordern die Aussetzung der Gebühren für alle Studierenden, vor allem aber für die, die sich im internationalen oder zweiten Studium befinden!",
     icon: LightningBoltIcon,
   },
   {
-    name: "Forderung #4",
-    description:
+    claim:
       "Wir fordern vernünftige, sozial angemessene finanzielle Unterstützung für Studierende!",
     icon: CashIcon,
   },
   {
-    name: "Forderung #5",
-    description:
+    claim:
       "Wir fordern die Anpassung der Prüfungsordnungen auf die besonderen Bedingungen der Pandemie!",
     icon: ScaleIcon,
   }
