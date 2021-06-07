@@ -2,6 +2,7 @@ import { Section, TeaserHeadline } from "./layout";
 import * as React from "react";
 import { AcademicCapIcon, CashIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from "@heroicons/react/outline";
 import { GlobalStyles } from "twin.macro";
+import { themeColor } from "../../site-config";
 
 export const Claims = () => {
   return (
@@ -11,7 +12,7 @@ export const Claims = () => {
         <div tw="py-12 bg-white">
           <div tw="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div tw="lg:text-center">
-              <TeaserHeadline>Unsere Forderungen</TeaserHeadline>
+              <TeaserHeadline style={{color: themeColor}}>Unsere Forderungen</TeaserHeadline>
               <p tw="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
                 Wir fordern vom Ministerium für Wissenschaft, Forschung und Kunst Baden-Württemberg angemessene Studienbedingungen
               </p>
@@ -22,7 +23,7 @@ export const Claims = () => {
                 {listItems.map((item) => (
                   <div key={item.name} tw="relative">
                     <dt>
-                      <div tw="absolute flex items-center justify-center h-12 w-12 rounded-md bg-yellow-500 text-white">
+                      <div tw="absolute flex items-center justify-center h-12 w-12 rounded-md text-white" style={{backgroundColor: themeColor}}>
                         <item.icon tw="h-6 w-6" aria-hidden="true"/>
                       </div>
                     </dt>
