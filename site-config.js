@@ -9,7 +9,7 @@ const config = {
   footerLink: "//dailysh.it",
   footerLogo: "images/logos/logo-1024.png",
   formIframeSrc: "https://docs.google.com/forms/d/e/1FAIpQLScbwhFgZcPZHyF_9fOv6tg_sRCLP-bxuB-LBLW3rbagqstlFg/viewform?embedded=true",
-  formUrl: "https://docs.google.com/forms/u/0/d/e/1FAIpQLScbwhFgZcPZHyF_9fOv6tg_sRCLP-bxuB-LBLW3rbagqstlFg/formResponse",
+  formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSfho4q8t0YQHHqf47EeePO6dK9HeL1xj9hslyVPJSG8tMWr9A/formResponse",
   landingPageImage: "images/content/hands.png",
   landingPageTeaser: "We're constantly collecting introductory material for all those interested in philosophy.<br><br><br><i><small>Easy language · Well researched · User-friendly</small></i>",
   landingPageTitle: "Philosophical<br>Paragraphs<br>Explained",

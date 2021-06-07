@@ -5,20 +5,17 @@ import { Card, CardImage, CardParagraph, CardTitle, Container, PostItem, Posts, 
 export const InstaPosts = () => {
   const data = useStaticQuery(graphql`
     {
-      allInstaNode {
+      allInstaNode(sort: {fields: timestamp, order: DESC}) {
         nodes {
           id
+          timestamp
           mediaType
           preview
           timestamp
           caption
           localFile {
             childImageSharp {
-              gatsbyImageData(
-                quality: 90
-                width: 360
-                layout: CONSTRAINED
-              )
+              gatsbyImageData(quality: 90, width: 360, layout: FIXED)
             }
           }
         }
@@ -52,16 +49,12 @@ export const InstaPosts = () => {
           {instaPosts && instaPosts.map(link => (
             <PostItem key={link.url}>
               <Card>
-                <CardTitle>{link.title}</CardTitle>
-                <CardParagraph>
-                  {link.caption}
-                </CardParagraph>
                 <a
                   href={`${link.url}`}
                   target={"_blank"}
                   rel={"nofollow noopener noreferrer"}
                 >
-                  <CardImage alt={link.caption ?? ""} image={link.imageData} imgStyle={{objectFit: "contain"}}/>
+                  <CardImage style={{maxWidth: "100%"}} alt={link.caption ?? ""} image={link.imageData} imgStyle={{objectFit: "contain"}}/>
                 </a>
               </Card>
             </PostItem>
