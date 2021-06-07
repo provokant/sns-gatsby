@@ -1,6 +1,6 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Card, CardImage, CardParagraph, CardTitle, Container, PostItem, Posts, Section } from "./layout";
+import { Card, CardImage, Container, PostItem, Posts, Section } from "./layout";
 
 export const InstaPosts = () => {
   const data = useStaticQuery(graphql`
@@ -15,7 +15,12 @@ export const InstaPosts = () => {
           caption
           localFile {
             childImageSharp {
-              gatsbyImageData(quality: 90, width: 360, layout: FIXED)
+              gatsbyImageData(
+                quality: 90
+                width: 600
+                placeholder: BLURRED
+                formats: [AUTO, WEBP]
+              )
             }
           }
         }
