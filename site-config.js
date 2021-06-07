@@ -14,12 +14,16 @@ const config = {
   landingPageTeaser: "We're constantly collecting introductory material for all those interested in philosophy.<br><br><br><i><small>Easy language · Well researched · User-friendly</small></i>",
   landingPageTitle: "Philosophical<br>Paragraphs<br>Explained",
   pathPrefix: "/",
-  questionAccept: "Yes, let me read more!",
-  questionDeny: "No, thanks",
-  showBackButton: true,
-  showCategoryLinks: true,
   siteBanner: "https://images.unsplash.com/photo-1583870996776-847fa9899398?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80",
-  siteDescription: "Studieren nicht Stagnieren",
+  siteDescription: `
+    In den vergangenen drei Semestern wurde das, was Studieren bedeutet, aus den Universitäten gefegt und in
+    WG-Zimmer oder Kinderzimmer gekehrt. Mit teilweise fatalen Folgen: Nebeneinkünfte, die das Studieren häufig
+    erst ermöglichen, brechen weg. Nach wie vor finden Prüfungen in Präsenz statt, es gelten häufig dieselben
+    Fristen und Modalitäten wie vor der Pandemie. Archive, Bibliotheken, Labore oder Werkstätten haben
+    geschlossen. Öffnungsperspektiven, wie es sie für Schulen gibt, fehlen. Wir wollen diese Probleme sichtbar
+    machen und sie in die Öffentlichkeit und auf die Straße tragen. Motto: Wir wollen studieren — nicht
+    stagnieren!
+  `,
   siteLanguage: "de",
   siteLogo: "images/logos/logo-1024.png",
   siteLogoTitle: "Montag · 14.06.2021 · Karlsplatz",

@@ -1,4 +1,4 @@
-import { Section, Teaser, TeaserHeadline } from "./layout";
+import { Section, TeaserHeadline } from "./layout";
 import * as React from "react";
 import { AcademicCapIcon, CashIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from "@heroicons/react/outline";
 import { GlobalStyles } from "twin.macro";
@@ -31,10 +31,6 @@ export const Claims = () => {
                 ))}
               </dl>
             </div>
-
-            <Teaser>
-              Wir möchten gehört und nicht vergessen werden! Wir fordern aktive Beteiligung! Mit uns und nicht gegen uns geht Hochschule besser!
-            </Teaser>
           </div>
         </div>
       </Section>
