@@ -45,6 +45,7 @@ export const OpenCall = () => {
     <>
       <GlobalStyles/>
       <Section>
+        <a name={"opencall"} id={"opencall"}/>
         <Container>
           <div>
             <div tw="md:grid md:grid-cols-3 md:gap-6">

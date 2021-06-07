@@ -49,6 +49,7 @@ export const InstaPosts = () => {
 
   return (
     <Section>
+      <a name={"posts"} id={"posts"}/>
       <Container>
         <Posts>
           {instaPosts && instaPosts.map(link => (
