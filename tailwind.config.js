@@ -1,10 +1,15 @@
 const plugin = require("tailwindcss/plugin")
+const config = require("./site-config")
 
 module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}"],
   darkMode: false, // or "media" or "class"
   theme: {
-    extend: {},
+    extend: {
+      color: {
+        magenta: config.themeColor
+      }
+    },
   },
   variants: {
     extend: {},

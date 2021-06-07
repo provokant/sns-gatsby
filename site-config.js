@@ -32,7 +32,7 @@ const config = {
   siteTitleAlt: "SNS",
   siteTitleShort: "SNS",
   siteUrl: "https://studieren-nicht-stagnieren.de/",
-  themeColor: "#c62828",
+  themeColor: "#fe009a",
   userLocation: "North Pole, Earth",
 };
 

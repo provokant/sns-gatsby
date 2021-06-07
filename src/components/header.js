@@ -1,13 +1,26 @@
 import { Popover, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
-import { Hero, HeroParagraph, HeroTitle, HeroWrapper, Intro, IntroWrapper, Picture, PictureWrapper, PolygonWrapper, Section } from "./layout";
+import { CardImage, Hero, HeroParagraph, HeroTitle, HeroWrapper, Intro, IntroWrapper, Picture, PictureWrapper, PolygonWrapper, Section } from "./layout";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import tw, { GlobalStyles } from "twin.macro";
-import { featureCta, siteBanner, siteLogoTitle, siteUrl } from "../../site-config";
+import { featureCta, themeColor, siteLogoTitle, siteUrl } from "../../site-config";
+import { graphql, useStaticQuery } from "gatsby";
 
 const Logo = tw.a`font-bold`;
 
 export const Header = () => {
+  const data = useStaticQuery(graphql`
+    {
+      file(relativePath: {eq: "intro.jpg"}) {
+        childImageSharp {
+          gatsbyImageData(quality: 90, width: 680, layout: CONSTRAINED)
+        }
+      }
+  
+    }
+  `);
+  const {gatsbyImageData: imgData} = data.file.childImageSharp;
+
   return (
     <>
       <GlobalStyles/>
@@ -114,7 +127,7 @@ export const Header = () => {
               <Hero>
                 <HeroTitle>
                   <span tw="block xl:inline">Studieren</span>{" "}
-                  <span tw="block text-yellow-600 xl:inline">nicht stagnieren</span>
+                  <span style={{ color: themeColor }} tw="block xl:inline">nicht stagnieren</span>
                 </HeroTitle>
                 <HeroParagraph>
                   14.06.2021 — Karlsplatz Stuttgart — 19:00 Uhr
@@ -144,7 +157,7 @@ export const Header = () => {
 
         <PictureWrapper>
           <Picture
-            src={siteBanner}
+            image={imgData} imgStyle={{objectFit: "contain"}}
             alt=""/>
         </PictureWrapper>
       </Section>
