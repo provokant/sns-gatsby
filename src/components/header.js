@@ -1,12 +1,12 @@
 import { Popover, Transition } from "@headlessui/react";
 import React, { Fragment } from "react";
-import { CardImage, Hero, HeroParagraph, HeroTitle, HeroWrapper, Intro, IntroWrapper, Picture, PictureWrapper, PolygonWrapper, Section } from "./layout";
+import { Hero, HeroParagraph, HeroTitle, HeroWrapper, Intro, IntroWrapper, Picture, PictureWrapper, Section } from "./layout";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import tw, { GlobalStyles } from "twin.macro";
 import { featureCta, themeColor, siteLogoTitle, siteUrl } from "../../site-config";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 
-const Logo = tw.a`font-bold`;
+const Logo = tw(Link)`font-bold`;
 
 export const Header = () => {
   const data = useStaticQuery(graphql`
@@ -28,15 +28,6 @@ export const Header = () => {
       <Section>
         <IntroWrapper>
           <Intro>
-            <PolygonWrapper
-              fill="currentColor"
-              viewBox="0 0 100 100"
-              preserveAspectRatio="none"
-              aria-hidden="true"
-            >
-              <polygon points="50,0 100,0 50,100 0,100"/>
-            </PolygonWrapper>
-
             <Popover>
               {({ open }) => (
                 <>
@@ -47,7 +38,7 @@ export const Header = () => {
                     >
                       <div tw="flex items-center flex-grow flex-shrink-0 lg:flex-grow-0">
                         <div tw="flex items-center justify-between w-full md:w-auto">
-                          <Logo href={siteUrl}>
+                          <Logo to={"/"}>
                             {siteLogoTitle}
                           </Logo>
                           <div tw="-mr-2 flex items-center md:hidden">

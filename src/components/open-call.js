@@ -50,11 +50,11 @@ export const OpenCall = () => {
               <div tw="md:col-span-1">
                 <div tw="px-4 sm:px-0">
                   <h3 tw="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl">Open Call</h3>
-                  <p tw="mt-1 text-sm text-gray-600">
+                  <Paragraph>
                     Und was ist mit dir? Wir als Initiator*innen sind Studierende. Und damit selbst direkt von den verschiedenen Einschränkungen betroffen. Aber was ist mit dir? Was ist deine Geschichte? Wie ging es dir während Corona?
                     Schreib uns deine Geschichte. Anonym. Wir posten Sie hier.<br/><br/>
                     Je mehr wir sind, desto lauter hört man unsere Forderungen!
-                  </p>
+                  </Paragraph>
                 </div>
               </div>
               <div tw="mt-5 md:mt-0 md:col-span-2">
@@ -63,7 +63,7 @@ export const OpenCall = () => {
                     <div tw="bg-white">
                       <textarea
                         name="post"
-                        rows={8}
+                        rows={14}
                         onChange={handleChange}
                         tw="shadow-sm p-4 block w-full sm:text-sm border-gray-300 focus:border-gray-500 rounded-md focus:outline-none"
                         placeholder="Deine Story ..."
