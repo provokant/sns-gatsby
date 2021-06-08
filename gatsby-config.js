@@ -13,8 +13,7 @@ module.exports = {
       image_url: `${urljoin(
         config.siteUrl,
         config.pathPrefix
-      )}/favicon.jpg`,
-      copyright: config.copyright,
+      )}${config.siteFavIcon}`,
     },
   },
   plugins: [
@@ -26,7 +25,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        icon: "src/images/favicon.jpg",
+        icon: `static${config.siteFavIcon}`,
       },
     },
     "gatsby-transformer-remark",
