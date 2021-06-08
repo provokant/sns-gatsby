@@ -21,8 +21,8 @@ export const Claims = () => {
 
             <div tw="mt-10">
               <dl tw="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-                {listItems.map((item) => (
-                  <div key={item.name} tw="relative">
+                {listItems.map((item, index) => (
+                  <div key={index} tw="relative">
                     <dt>
                       <div tw="absolute flex items-center justify-center h-12 w-12 rounded-md text-white" style={{backgroundColor: themeColor}}>
                         <item.icon tw="h-6 w-6" aria-hidden="true"/>
