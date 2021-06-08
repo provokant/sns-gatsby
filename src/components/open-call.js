@@ -1,7 +1,6 @@
-import { Container, Paragraph, Section } from "./layout";
+import { Container, Section } from "./layout";
 import * as React from "react";
-import { useState } from "react";
-import { featureCustomForm, formIframeSrc, formUrl, themeColor } from "../../site-config";
+import { featureCustomForm, formIframeSrc } from "../../site-config";
 import { GlobalStyles } from "twin.macro";
 import { CustomForm } from "./custom-form";
 
