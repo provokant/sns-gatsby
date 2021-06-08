@@ -57,7 +57,7 @@ export const InstaPosts = () => {
           <SectionTitle>Eure Beiträge auf Instagram</SectionTitle>
         </div>
         <Posts>
-          {instaPosts && instaPosts.map(link => (
+          {instaPosts && instaPosts.map((link) => (
             <PostItem key={link.url}>
               <Card>
                 <a
