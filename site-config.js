@@ -5,6 +5,7 @@ const config = {
   dateFormat: "DD/MM/YYYY",
   dateFromFormat: "YYYY-MM-DD",
   featureCta: false,
+  featureCustomForm: false,
   footerBackground: "images/content/sky.jpg",
   footerLink: "//dailysh.it",
   footerLogo: "images/logos/logo-1024.png",
