@@ -118,7 +118,7 @@ export const Header = () => {
               <Hero>
                 <HeroTitle>
                   <span tw="block xl:inline">Studieren</span>{" "}
-                  <span style={{ color: themeColor }} tw="block xl:inline">nicht stagnieren</span>
+                  <span tw="block xl:inline text-magenta">nicht stagnieren</span>
                 </HeroTitle>
                 <HeroParagraph>
                   14.06.2021 — Karlsplatz Stuttgart — 19:00 Uhr

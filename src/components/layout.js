@@ -2,6 +2,7 @@ import tw from "twin.macro";
 import { GatsbyImage } from "gatsby-plugin-image";
 
 export const Section = tw.section`relative bg-white overflow-hidden mb-36`;
+export const SectionTitle = tw.h2`mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl`;
 export const IntroWrapper = tw.div`max-w-7xl mx-auto`;
 export const Intro = tw.div`relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`;
 export const PictureWrapper = tw.div`lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2`;
@@ -10,7 +11,7 @@ export const HeroWrapper = tw.main`mt-16 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6
 export const Hero = tw.div`text-center lg:text-left`;
 export const HeroTitle = tw.h1`text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl`;
 export const HeroParagraph = tw.p`mt-3 text-base text-gray-900 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0`;
-export const TeaserHeadline = tw.h2`text-base font-semibold tracking-wide uppercase`;
+export const SubTitle = tw.h2`text-base font-semibold tracking-wide text-magenta uppercase`;
 export const Paragraph = tw.p`text-xl text-gray-900 lg:w-10/12`;
 export const Container = tw.div`max-w-7xl mt-8 mx-auto px-4 sm:px-6 lg:px-8`;
 export const Posts = tw.ul`flex flex-wrap mb-12 text-left`;

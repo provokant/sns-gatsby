@@ -7,7 +7,10 @@ module.exports = {
   darkMode: false, // or "media" or "class"
   theme: {
     extend: {
-      color: {
+      backgroundColor: {
+        magenta: config.themeColor
+      },
+      textColor: {
         magenta: config.themeColor
       }
     },
@@ -23,6 +26,6 @@ module.exports = {
         "h3": { fontSize: theme("fontSize.lg"), marginBottom: theme("spacing.6") },
         "p": { marginBottom: theme("spacing.12") },
       })
-    })
+    }),
   ],
 }
