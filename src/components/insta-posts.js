@@ -1,6 +1,7 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import { Card, CardImage, Container, PostItem, Posts, Section } from "./layout";
+import tw from "twin.macro";
+import { Card, CardImage, Container, PostItem, Posts, Section, SectionTitle, SubTitle } from "./layout";
 
 export const InstaPosts = () => {
   const data = useStaticQuery(graphql`
@@ -51,6 +52,10 @@ export const InstaPosts = () => {
     <Section>
       <a name={"posts"} id={"posts"}/>
       <Container>
+        <div tw={"text-center"}>
+          <SubTitle>Was ihr so sagt</SubTitle>
+          <SectionTitle>Eure Beiträge auf Instagram</SectionTitle>
+        </div>
         <Posts>
           {instaPosts && instaPosts.map(link => (
             <PostItem key={link.url}>
