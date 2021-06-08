@@ -42,18 +42,11 @@ const commits = [
 
 const stats = commits
   .map(([timestamp, message]) => {
-    const duration = message.match(/\((\d+[mh])/)
-
-    return [timestamp, duration ? duration[1] : "4m"]
-  })
-  .map(([timestamp, duration]) => {
+    const [,duration] = message.match(/\((\d+[hms])/) ?? [,"4m"]
     const [value, unit] = [
       duration.match(/\d*/)[0],
       duration.slice(-1),
     ]
-    return [timestamp, value, unit]
-  })
-  .map(([timestamp, value, unit]) => {
     const unitFactorMap = (unit) => {
       switch(unit) {
         case "h":
