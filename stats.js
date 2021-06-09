@@ -64,6 +64,8 @@ const stats = commits
   })
 
 console.log(stats)
+console.log("")
+console.log("In total:", stats.reduce((t1, [,t2]) => parseInt(t1)+parseInt(t2)))
 
 process.exit()
 
