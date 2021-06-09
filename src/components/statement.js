@@ -1,4 +1,5 @@
 import * as React from "react";
+import tw from "twin.macro";
 import { Container, Paragraph, Section } from "./layout";
 
 export const Statement = () => {
