@@ -1,19 +1,18 @@
+import { useState } from "react";
+import * as React from "react";
+import tw from "twin.macro";
+// import Confetti from "react-dom-confetti";
 import { Paragraph } from "./layout";
 import { formUrl, themeColor } from "../../site-config";
-import * as React from "react";
-import { useState } from "react";
+
 
 export const CustomForm = () => {
   const form = {
-    post: "",
+    message: "",
   };
   const [formData, setFormData] = useState(form);
   const [isFormSubmitted, submitForm] = useState(false);
   const [hasFormError, formError] = useState(undefined);
-
-  const payload = {
-    "entry.513669972": formData.post ?? "No message",
-  }
 
   const submitPost = (event) => {
     event.preventDefault();
@@ -22,16 +21,15 @@ export const CustomForm = () => {
       method: "POST",
       headers: {
         "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(payload),
+      body: JSON.stringify(formData),
     })
-      .then((res) => res.json())
-      .then((result) => {
-        submitForm(true);
-        console.log("Post sent perfectly", result);
-      })
-      .catch((err) => console.log("Something went wrong ... Please, check your internet connection.", err))
+    .then((result) => {
+      submitForm(true);
+      console.log("Post sent perfectly", result);
+    })
+    .catch((err) => console.log("Something went wrong ... Please, check your internet connection.", err))
   }
 
   const handleChange = (event) => {
@@ -64,14 +62,14 @@ export const CustomForm = () => {
             {!isFormSubmitted && <form onSubmit={submitPost}>
               <div tw="shadow sm:rounded-md sm:overflow-hidden">
                 <div tw="bg-white">
-                      <textarea
-                        name="post"
-                        rows={14}
-                        onChange={handleChange}
-                        tw="shadow-sm p-4 block w-full text-2xl border-gray-300 focus:border-gray-500 rounded-md focus:outline-none"
-                        placeholder="Und was ist mit dir? "
-                        value={formData.post || ""}
-                      />
+                  <textarea
+                    name="message"
+                    rows={14}
+                    onChange={handleChange}
+                    tw="shadow-sm p-4 block w-full text-2xl border-gray-300 focus:border-gray-500 rounded-md focus:outline-none"
+                    placeholder="Und was ist mit dir? "
+                    value={formData.message || ""}
+                  />
                 </div>
 
                 <div tw="px-4 py-3 bg-gray-50 text-right sm:px-6">
