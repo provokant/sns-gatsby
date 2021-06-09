@@ -2,7 +2,7 @@ const config = {
   dateFormat: "DD/MM/YYYY",
   dateFromFormat: "YYYY-MM-DD",
   featureCta: false,
-  featureCustomForm: false,
+  featureCustomForm: true,
   footerLink: "//dailysh.it",
   footerLogo: "images/logos/logo-1024.png",
   formIframeSrc: "//docs.google.com/forms/d/e/1FAIpQLSfho4q8t0YQHHqf47EeePO6dK9HeL1xj9hslyVPJSG8tMWr9A/viewform?embedded=true",
