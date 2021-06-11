@@ -19,6 +19,8 @@ export const InstaPosts = () => {
               gatsbyImageData(
                 quality: 90
                 width: 600
+                height: 600,
+                layout: CONSTRAINED,
                 placeholder: BLURRED
                 formats: [AUTO, WEBP]
               )
@@ -50,7 +52,7 @@ export const InstaPosts = () => {
 
   return (
     <Section>
-      <a name={"posts"} id={"posts"}/>
+      <a name={"posts"} id={"posts"} href={"#posts"}/>
       <Container>
         <div tw={"text-center"}>
           <SubTitle>Was ihr so sagt</SubTitle>

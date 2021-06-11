@@ -1,9 +1,9 @@
-import { useState } from "react";
 import * as React from "react";
-import tw from "twin.macro";
+import { useState } from "react";
 // import Confetti from "react-dom-confetti";
+import tw from "twin.macro";
 import { Paragraph } from "./layout";
-import { formUrl, themeColor } from "../../site-config";
+import { formUrl } from "../../site-config";
 
 
 export const CustomForm = () => {
@@ -12,7 +12,7 @@ export const CustomForm = () => {
   };
   const [formData, setFormData] = useState(form);
   const [isFormSubmitted, submitForm] = useState(false);
-  const [hasFormError, formError] = useState(undefined);
+  const [hasFormError, setFormError] = useState(undefined);
 
   const submitPost = (event) => {
     event.preventDefault();
@@ -29,7 +29,10 @@ export const CustomForm = () => {
       submitForm(true);
       console.log("Post sent perfectly", result);
     })
-    .catch((err) => console.log("Something went wrong ... Please, check your internet connection.", err))
+    .catch((err) => {
+      setFormError(true);
+      console.log("Something went wrong ... Please, check your internet connection.", err);
+    })
   }
 
   const handleChange = (event) => {
@@ -53,13 +56,9 @@ export const CustomForm = () => {
           </div>
         </div>
         <div tw="mt-5 md:mt-0 md:col-span-2">
-          {hasFormError ? <>
-            <div tw="shadow sm:rounded-md sm:overflow-hidden">
-              <Paragraph>Da is wat schief jelaufen -.-'</Paragraph>
-            </div>
-
-          </> : <>
-            {!isFormSubmitted && <form onSubmit={submitPost}>
+          {hasFormError
+            ? <Paragraph>Da is wat schief jelaufen -.-'</Paragraph>
+            : !isFormSubmitted && <form onSubmit={submitPost}>
               <div tw="shadow sm:rounded-md sm:overflow-hidden">
                 <div tw="bg-white">
                   <textarea
@@ -80,9 +79,9 @@ export const CustomForm = () => {
                   </button>
                 </div>
               </div>
-            </form>}
-            {isFormSubmitted && <Paragraph>Danke für deine Bemührungen!</Paragraph>}
-          </>}
+            </form>
+          }
+          {isFormSubmitted && <Paragraph>Danke für deine Bemührungen!</Paragraph>}
         </div>
       </div>
     </div>

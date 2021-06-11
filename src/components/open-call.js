@@ -1,7 +1,7 @@
 import { Container, Section } from "./layout";
 import * as React from "react";
 import { featureCustomForm, formIframeSrc } from "../../site-config";
-import { GlobalStyles } from "twin.macro";
+import tw, { GlobalStyles } from "twin.macro";
 import { CustomForm } from "./custom-form";
 
 export const OpenCall = () => {
@@ -9,7 +9,7 @@ export const OpenCall = () => {
     <>
       <GlobalStyles/>
       <Section>
-        <a name={"opencall"} id={"opencall"}/>
+        <a name={"opencall"} id={"opencall"} href={"#opencall"}/>
         <Container>
           {featureCustomForm
           ? <CustomForm/>

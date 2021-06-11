@@ -24,7 +24,6 @@ export const Header = () => {
   return (
     <>
       <GlobalStyles/>
-
       <Section>
         <IntroWrapper>
           <Intro>
