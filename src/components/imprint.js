@@ -1,6 +1,7 @@
 import * as React from "react";
-import { Container, Section } from "./layout";
+import { Container, Paragraph, Section } from "./layout";
 import { GlobalStyles } from "twin.macro";
+import { maintainerLink, maintainerName, maintainerRepository  } from "../../site-config";
 
 export const Imprint = () => {
   return (
@@ -71,6 +72,16 @@ export const Imprint = () => {
             Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine
             Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis.
             Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen</p>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Paragraph>
+            Diese Seite wurde entwickelt und umgesetzt mit der freundlichen Unterstützung von <a href={maintainerLink} target={"_blank"} rel={"nofollow noopener noreferrer"} tw={"font-bold text-magenta"}>{maintainerName}</a>
+          </Paragraph>
+          <Paragraph>
+            Der gesamte Quellcode steht der Öffentlichkeit zur Weiterverwendung kostenfrei zur Vergügung unter: <a href={maintainerRepository} target={"_blank"} rel={"nofollow noopener norefferer"} tw={"font-bold text-magenta"}>https:{maintainerRepository}</a>
+          </Paragraph>
         </Container>
       </Section>
     </>
