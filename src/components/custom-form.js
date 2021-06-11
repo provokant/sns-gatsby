@@ -78,15 +78,15 @@ export const CustomForm = () => {
                 {hasFormError
                   ? <div tw={"text-center p-6 text-xl text-magenta font-semibold"}>Da is wat schief jelaufen -.-'</div>
                   : isFormSubmitted
-                    ? <div tw={"text-center p-6 text-xl text-magenta font-semibold"}>Danke für deine Bemührungen!</div>
+                    ? <div tw={"text-center p-6 text-xl text-magenta font-semibold"}>Danke für deine Bemühungen!</div>
                     : <textarea
-                      name="message"
-                      rows={14}
-                      onChange={handleChange}
-                      tw="shadow-sm p-4 block w-full text-2xl border-gray-300 focus:border-gray-500 rounded-md focus:outline-none"
-                      placeholder="Und was ist mit dir? "
-                      value={formData.message || ""}
-                    />
+                        name="message"
+                        rows={14}
+                        onChange={handleChange}
+                        tw="shadow-sm p-4 block w-full text-2xl border-gray-300 focus:border-gray-500 rounded-md focus:outline-none"
+                        placeholder="Und was ist mit dir? "
+                        value={formData.message || ""}
+                      />
                 }
               </div>
 
