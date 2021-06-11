@@ -1,7 +1,7 @@
 import tw from "twin.macro";
 import { GatsbyImage } from "gatsby-plugin-image";
 
-export const Section = tw.section`relative bg-white overflow-hidden mb-36`;
+export const Section = tw.section`relative bg-white mb-36`;
 export const SectionTitle = tw.h2`mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl`;
 export const IntroWrapper = tw.div`max-w-7xl mx-auto`;
 export const Intro = tw.div`relative z-10 pb-8 sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32`;
