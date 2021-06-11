@@ -1,5 +1,6 @@
 const plugin = require("tailwindcss/plugin")
 const config = require("./site-config")
+const { themeColor: magenta } = config
 
 module.exports = {
   mode: "jit",
@@ -8,11 +9,14 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        magenta: config.themeColor
+        magenta,
+      },
+      borderColor: {
+        magenta,
       },
       textColor: {
-        magenta: config.themeColor
-      }
+        magenta,
+      },
     },
   },
   variants: {
