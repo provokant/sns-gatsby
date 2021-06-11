@@ -46,7 +46,7 @@ export const CustomForm = () => {
             <h2 tw="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-2xl md:text-3xl">Open Call</h2>
             <Paragraph>
               Wir als Initiator*innen sind Studierende. Und damit selbst direkt von den verschiedenen Einschränkungen betroffen<br/><br/>
-              Aber was ist mit dir? Was ist deine Geschichte? Wie ging es dir während Corona?<br/><br/>
+              Aber was ist mit dir? Was ist deine Geschichte? Wie ging es dir während der Maßnahmen?<br/><br/>
               <span tw={"font-bold"}>Schreib uns deine Geschichte. Anonym. Wir posten Sie hier.</span><br/><br/>
               Je mehr wir sind, desto lauter hört man unsere Forderungen!
             </Paragraph>
