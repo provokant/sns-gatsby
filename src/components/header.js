@@ -3,7 +3,7 @@ import React, { Fragment } from "react";
 import { Hero, HeroParagraph, HeroTitle, HeroWrapper, Intro, IntroWrapper, Picture, PictureWrapper, Section } from "./layout";
 import { MenuIcon, XIcon } from "@heroicons/react/outline";
 import tw, { GlobalStyles } from "twin.macro";
-import { featureCta, themeColor, siteLogoTitle, siteUrl } from "../../site-config";
+import { featureCta, siteLogoTitle, siteUrl } from "../../site-config";
 import { graphql, useStaticQuery, Link } from "gatsby";
 
 const Logo = tw(Link)`font-bold`;
