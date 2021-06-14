@@ -7,7 +7,7 @@ import { OpenCall } from "../components/open-call";
 import { Link } from "gatsby";
 import { Seo } from "../components/seo";
 import { InstaPosts } from "../components/insta-posts";
-import { Container } from "../components/layout";
+import { Container, SubTitle, Section, SectionTitle } from "../components/layout";
 
 const ImprintLink = tw(Link)`py-8`;
 
@@ -18,6 +18,16 @@ const IndexPage = () => {
       <GlobalStyles/>
       <Header/>
       <Statement/>
+      <Section>
+        <Container tw="lg:text-center">
+          <SubTitle>
+            Disclaimer
+          </SubTitle>
+          <SectionTitle>
+            Wir <span tw={"text-magenta"}>distanzieren</span> uns klar von "Querdenken711"
+          </SectionTitle>
+        </Container>
+      </Section>
       <Claims/>
       <InstaPosts/>
       <OpenCall/>

@@ -1,7 +1,7 @@
 import { Section, SectionTitle, SubTitle } from "./layout";
 import * as React from "react";
 import { AcademicCapIcon, CashIcon, GlobeAltIcon, LightningBoltIcon, ScaleIcon } from "@heroicons/react/outline";
-import { GlobalStyles } from "twin.macro";
+import tw, { GlobalStyles } from "twin.macro";
 
 export const Claims = () => {
   return (
@@ -46,7 +46,7 @@ const listItems = [
   {
     claim:
       "Wir fordern ein integratives Konzept der universitären Idee für die digitalen Angebote! Die Universität lebt auch außerhalb des Hörsaals und Diskurse lassen sich nur sehr schwer oder überhaupt nicht in Videokonferenzen führen.",
-    icon: GlobeAltIcon,
+    icon: LightningBoltIcon,
   },
   {
     claim:
@@ -56,7 +56,7 @@ const listItems = [
   {
     claim:
       "Wir fordern die Aussetzung der Gebühren für alle Studierenden, vor allem aber für die, die sich im internationalen oder zweiten Studium befinden!",
-    icon: LightningBoltIcon,
+    icon: GlobeAltIcon,
   },
   {
     claim:
