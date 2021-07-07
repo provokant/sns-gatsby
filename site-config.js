@@ -6,6 +6,7 @@ const config = {
   footerLogo: "images/logos/logo-1024.png",
   formIframeSrc: "//docs.google.com/forms/d/e/1FAIpQLSfho4q8t0YQHHqf47EeePO6dK9HeL1xj9hslyVPJSG8tMWr9A/viewform?embedded=true",
   formUrl: "//sns.dailysh.it/dGVzdGRsYXNoIGRha3NqZGxrYXNqZG9uaXNhN2RiOThhc243ZDg5Nzk4c2FETS9EUykoTS9BU0QoQS9TRCkoLz07U0EoRHNhMDltOGQwOWE4c25kMGFzOGQwOWE4bXMwOWQsODA5c2E4ZDA5OG1zYW5kc2EwN2RhOThzZEIpKC9EKSgvU0EvRCkoQS9EUy9BUykoL0QvQlNBRCgvU0ElRC8kQadTPSkoTTtEREREREpLU0FIREhBTEtEU05TQURQSUtTQSrcRCfWQSdTRNYnQSdEQURT3CoqQVPcRAoi",
+  instagramUrl: "//www.instagram.com/studieren_nicht_stagnieren/",
   maintainerLink: "//dailysh.it",
   maintainerName: "NEXT LEVEL SHIT",
   maintainerRepository: "//github.com/provokant/sns-gatsby/",
