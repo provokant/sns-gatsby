@@ -16,14 +16,13 @@ export const Header = () => {
           gatsbyImageData(quality: 90, width: 680, layout: CONSTRAINED)
         }
       }
-  
     }
   `);
-  const {gatsbyImageData: imgData} = data.file.childImageSharp;
+  const { gatsbyImageData: imgData } = data.file.childImageSharp;
 
   return (
     <>
-      <GlobalStyles/>
+      <GlobalStyles />
       <Section>
         <IntroWrapper>
           <Intro>
@@ -44,7 +43,7 @@ export const Header = () => {
                             <Popover.Button
                               tw="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
                               <span tw="sr-only">Menü öffnen</span>
-                              <MenuIcon tw="h-6 w-6" aria-hidden="true"/>
+                              <MenuIcon tw="h-6 w-6" aria-hidden="true" />
                             </Popover.Button>
                           </div>
                         </div>
@@ -85,7 +84,7 @@ export const Header = () => {
                             <Popover.Button
                               tw="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-yellow-500">
                               <span tw="sr-only">Close main menu</span>
-                              <XIcon tw="h-6 w-6" aria-hidden="true"/>
+                              <XIcon tw="h-6 w-6" aria-hidden="true" />
                             </Popover.Button>
                           </div>
                         </div>
@@ -120,7 +119,7 @@ export const Header = () => {
                   <span tw="block xl:inline text-magenta">nicht stagnieren</span>
                 </HeroTitle>
                 <HeroParagraph>
-                  14.06.2021 — Karlsplatz Stuttgart — 19:00 Uhr
+                  16.07.2021 — Stadtgarten Konstanz — 19:00 Uhr
                 </HeroParagraph>
                 {featureCta && <div tw="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div tw="rounded-md shadow">
@@ -147,8 +146,8 @@ export const Header = () => {
 
         <PictureWrapper>
           <Picture
-            image={imgData} imgStyle={{objectFit: "contain"}}
-            alt=""/>
+            image={imgData} imgStyle={{ objectFit: "contain" }}
+            alt="" />
         </PictureWrapper>
       </Section>
     </>

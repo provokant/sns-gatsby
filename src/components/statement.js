@@ -22,14 +22,14 @@ export const Statement = () => {
           Vor allem wehren wir uns gegen die psychischen Belastungen und die schlechten und niederschmetternden
           Zukunftsperspektiven des Studiums in der Pandemie! Über die Zahl der Abbrecher*innen, der coronabedingt
           vertagten Prüfungen oder die schiere Überforderung eines Online-Studiums wird kaum gesprochen. Wir möchten ein
-          Zeichen setzen: <span tw={"font-bold"}>Ihr seid nicht allein!</span><br/>
-          Wir, das sind Studierende aller Akademien, Hochschulen und Universitäten in Stuttgart.
+          Zeichen setzen: <span tw={"font-bold"}>Ihr seid nicht allein!</span><br />
+          Wir, das sind Studierende aller Akademien, Hochschulen und Universitäten in Baden-Württemberg.
         </Paragraph>
 
         <Paragraph tw={"font-bold"}>
-          Wir möchten gehört und nicht vergessen werden!<br/><br/>
-          Wir zeigen Gesicht — mit Maske.<br/>
-          Wir gehen auf die Straße — mit Abstand.<br/>
+          Wir möchten gehört und nicht vergessen werden!<br /><br />
+          Wir zeigen Gesicht — mit Maske.<br />
+          Wir gehen auf die Straße — mit Abstand.<br />
           Wir sind in der Krise solidarisch — ohne Zögern.
         </Paragraph>
       </Container>
