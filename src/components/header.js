@@ -156,6 +156,7 @@ export const Header = () => {
 
 const navigation = [
   { name: 'Beiträge', href: '/#posts', isMobileOnly: false },
+  { name: 'Videos', href: '/#videos', isMobileOnly: false },
   { name: 'Open Call', href: '/#opencall', isMobileOnly: false },
-  { name: 'Kontakt', href: '/imprint', isMobileOnly: false },
+  // { name: 'Kontakt', href: '/imprint', isMobileOnly: false },
 ];

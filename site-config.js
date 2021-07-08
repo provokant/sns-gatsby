@@ -15,12 +15,14 @@ const config = {
   siteDescription: "In den vergangenen drei Semestern wurde das, was Studieren bedeutet, aus den Universitäten gefegt und in WG-Zimmer oder Kinderzimmer gekehrt. Mit teilweise fatalen Folgen: Nebeneinkünfte, die das Studieren häufig erst ermöglichen, brechen weg. Nach wie vor finden Prüfungen in Präsenz statt, es gelten häufig dieselben Fristen und Modalitäten wie vor der Pandemie. Archive, Bibliotheken, Labore oder Werkstätten haben geschlossen. Öffnungsperspektiven, wie es sie für Schulen gibt, fehlen. Wir wollen diese Probleme sichtbar machen und sie in die Öffentlichkeit und auf die Straße tragen. Motto: Wir wollen studieren — nicht stagnieren!",
   siteFavIcon: "/images/favicon.jpg",
   siteLanguage: "de",
-  siteLogoTitle: "Freitag · 16.07.2021 · Stadtgarten Konstanz",
+  siteLogoTitle: "Fr, 16.07.2021 · Stadtgarten Konstanz",
   siteRss: "/rss.xml",
   siteTitle: "Studieren nicht Stagnieren!",
   siteTitleAlt: "SNS",
   siteUrl: "https://studieren-nicht-stagnieren.de/",
   themeColor: "#fe009a",
+  ytApiKey: "AIzaSyDUyAM-Vyc11CsCQvXHfBa_BXz4xnM03JU",
+  ytUrl: "//www.youtube.com/channel/UCe8R3Pi2vzDkaDJZW_CeznQ"
 };
 
 // Validate

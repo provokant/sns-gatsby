@@ -29,7 +29,7 @@ module.exports = {
       },
     },
     "gatsby-transformer-remark",
-    "gatsby-plugin-mdx",
+    // "gatsby-plugin-mdx",
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -52,6 +52,14 @@ module.exports = {
       resolve: "gatsby-source-instagram",
       options: {
         username: "48242388114",
+      },
+    },
+    {
+      resolve: "gatsby-source-youtube-v3",
+      options: {
+        channelId: ["UCe8R3Pi2vzDkaDJZW_CeznQ"],
+        apiKey: config.ytApiKey,
+        maxVideos: 50
       },
     },
     "gatsby-plugin-emotion"

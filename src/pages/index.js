@@ -8,16 +8,18 @@ import { Link } from "gatsby";
 import { Seo } from "../components/seo";
 import { InstaPosts } from "../components/insta-posts";
 import { Container, SubTitle, Section, SectionTitle } from "../components/layout";
+import { YtVideos } from "../components/yt-videos";
+import { Press } from "../components/press";
 
 const ImprintLink = tw(Link)`py-8`;
 
 const IndexPage = () => {
   return (
     <>
-      <Seo/>
-      <GlobalStyles/>
-      <Header/>
-      <Statement/>
+      <Seo />
+      <GlobalStyles />
+      <Header />
+      <Statement />
       <Section>
         <Container tw="lg:text-center">
           <SubTitle>
@@ -28,9 +30,11 @@ const IndexPage = () => {
           </SectionTitle>
         </Container>
       </Section>
-      <Claims/>
-      <InstaPosts/>
-      <OpenCall/>
+      <Claims />
+      <InstaPosts />
+      <YtVideos />
+      <Press />
+      <OpenCall />
       <Container>
         <ImprintLink to={"/imprint"}>Impressum</ImprintLink>
       </Container>

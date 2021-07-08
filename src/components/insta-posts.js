@@ -1,7 +1,7 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import tw from "twin.macro";
-import { Card, CardImage, Container, PostItem, Posts, Section, SectionTitle, SubTitle } from "./layout";
+import { Card, CardImage, Container, PostWrapper, Posts, Section, SectionTitle, SubTitle } from "./layout";
 import { InstaIcon } from "./insta-icon";
 import { instagramUrl } from "../../site-config";
 
@@ -65,7 +65,7 @@ export const InstaPosts = () => {
         </div>
         <Posts>
           {instaPosts && instaPosts.map((link) => (
-            <PostItem key={link.url}>
+            <PostWrapper key={link.url}>
               <Card>
                 <a
                   href={`${link.url}`}
@@ -75,7 +75,7 @@ export const InstaPosts = () => {
                   <CardImage style={{ maxWidth: "100%" }} alt={link.caption ?? ""} image={link.imageData} imgStyle={{ objectFit: "contain" }} />
                 </a>
               </Card>
-            </PostItem>
+            </PostWrapper>
           ))}
         </Posts>
       </Container>
